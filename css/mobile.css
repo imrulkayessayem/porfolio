@@ -28,77 +28,18 @@ ul li {
 
 
 /* about */
-
-
-.rotating-box {
-  width: 200px;
-  height: 200px;
+#section {
+  height: 120vh;
 }
 
-.single-rb {
-  width: 200px;
-}
-
-.single-rb img {
-  height: 200px;
-  width: 200px;
-}
-
-.single-rb div {
-  width: 200px;
-  height: 200px;
-}
-
-.front-side {
-  transform: translateZ(100px);
-}
-
-.back-side {
-  transform: rotateY(180deg) translateZ(100px);
-}
-
-.left-side {
-  transform: rotateY(-90deg) translateX(-100px);
-  transform-origin: left;
-}
-
-.right-side {
-  transform: rotateY(90deg) translateX(100px);
-  transform-origin: right;
-}
-
-.top-side {
-  transform: rotateX(-90deg) translateY(-100px);
-  transform-origin: top;
-}
-
-.bottom-side {
-  transform: rotateX(90deg) translateY(100px);
-  transform-origin: bottom;
-}
-
-/* Skils */
+/* Skills */
 
 
 .skills {
-  width: 250px;
+  width: 290px;
+  padding: 5rem ;
 }
 
-.skills h1 {
-  font-size: 2rem;
-}
-
-.skills h3 {
-  font-size: 1.5rem;
-}
-
-.skills li {
-  margin: 1.5rem 0;
-}
-
-.border {
-  height: 20px;
-}
 
 /* Contact */
 

@@ -28,7 +28,7 @@ body {
 
 #header {
   background: #000;
-  height: 104vh;
+  height: 100vh;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -374,7 +374,6 @@ ul li a:hover {
 #section {
   background: rgb(44, 44, 44);
   height: 100vh;
-  transform: skewY(2deg);
 }
 
 .about-content {
@@ -394,11 +393,12 @@ ul li a:hover {
 .about h1 {
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  text-shadow: 0.75px 0.75px 1px #000, 0 0 .75em rgb(26, 25, 25), 0 0 0.1em #fff;
+  text-shadow: 0 0 1px #fff;
 }
 
 .about p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 0.85px #fff;
 }
 
 .about a {
@@ -413,95 +413,31 @@ ul li a:hover {
   color: rgb(39, 39, 39);
 }
 
-
-/* Rotate Box */
-
-.rotating-box {
-  width: 400px;
-  height: 400px;
-  margin: 20px auto;
-  perspective: 3000px;
-}
-
-.single-rb {
-  width: 400px;
-  animation: rotate 10s linear infinite;
-  transform-style: preserve-3d;
-}
-
-.single-rb img {
-  height: 400px;
-  width: 400px;
-}
-
-.single-rb div {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-}
-
-.front-side {
-  transform: translateZ(200px);
-}
-
-.back-side {
-  transform: rotateY(180deg) translateZ(200px);
-}
-
-.left-side {
-  transform: rotateY(-90deg) translateX(-200px);
-  transform-origin: left;
-}
-
-.right-side {
-  transform: rotateY(90deg) translateX(200px);
-  transform-origin: right;
-}
-
-.top-side {
-  transform: rotateX(-90deg) translateY(-200px);
-  transform-origin: top;
-}
-
-.bottom-side {
-  transform: rotateX(90deg) translateY(200px);
-  transform-origin: bottom;
-}
-
-@keyframes rotate{
-  0% {
-    transform: rotateY(0);
-  }
-
-  100% {
-    transform: rotateY(360deg);
-  }
-}
-
-
 /* Skils */
 
 #section-2 {
-  height: 60vh;
+  height:80vh;
 }
 
 .skills {
-  width: 500px;
-  margin: 4rem auto;
+  max-width: 1000px;
+  margin: 200px auto;
 }
 
 .skills h1 {
   font-size: 3rem;
-  text-shadow: 0 0 7px #ffd500;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .skills h3 {
   font-size: 2rem;
-  text-shadow: 0 0 7px #ffd500;
+  text-shadow: 0 0 1px #ffd500;
+  margin-top: 2rem;
 }
 
 .skills li {
-  margin: 1.5rem 0;
+  margin: 2rem 0;
 }
 
 .border {
@@ -511,7 +447,7 @@ ul li a:hover {
   border: 1px solid rgba(255, 255, 255, 0.377);
   border-radius: 10rem;
   overflow: hidden;
-  box-shadow: 0 0 15px #ffd500;
+  box-shadow: 0 0 5px #ffd500;
 }
 
 .border span {
@@ -624,7 +560,7 @@ ul li a:hover {
 }
 
 .box-container .card .box:hover {
-  transform: translateY(-50px);
+  transform: translateY(-100px);
 }
 
 .box-container .card .box .box-content {
@@ -727,14 +663,63 @@ ul li a:hover {
   color: #000;
 }
 
-.social-content a > i {
-  padding: 0 3rem;
-  font-size: 2rem;
-  transition: 1s;
+
+.social-content a {
+  display: inline-block;
+  position: relative;
+  background: #fff;
+  width: 75px;
+  height: 75px;
+  margin: 20px 20px;
+  border-radius: 24px;
+  box-shadow: -5px -5px 11px rgba(255, 255, 255, 0), 
+          5px 5px 11px rgba(0,0,0,15);
+  transition: .2s linear;
+  overflow: hidden;
+  font-size: 28px;
 }
 
-.social-content a > i:hover {
-  color: red;
+.social-content a:hover {
+    border-radius: 50%;
+    transform: scale(1.3);
+}
+
+.social-content a i::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-image: linear-gradient(135deg,#000000 30%,#000000b6 50%);
+  background-size: 200% 200%;
+  background-position: -75% -75%;
+  top: 0;
+  left: 0;
+  line-height: 80px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transition: background .5s linear;
+}
+
+a:hover i::before {
+  background-position: 0% 0%;
+}
+
+.social-content a .fa-twitter::before {
+  background-image: linear-gradient(140deg, #1da1f2 25%, #000000 45%);
+}
+
+.social-content a .fa-youtube::before {
+  background-image: linear-gradient(140deg, #ec0101 25%, #000000 45%);
+}
+
+
+.social-content a .fa-instagram::before {
+  background-image: linear-gradient(140deg, #f13939 25%, #000000 45%);
+}
+
+
+.social-content a .fa-facebook-f::before {
+  background-image: linear-gradient(140deg, #29487d 25%, #000000 45%);
 }
 
 /* footer */
